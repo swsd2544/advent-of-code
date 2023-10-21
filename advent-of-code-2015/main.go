@@ -9,6 +9,7 @@ import (
 	"advent-of-code-2015/day1"
 	"advent-of-code-2015/day2"
 	"advent-of-code-2015/day3"
+	"advent-of-code-2015/day4"
 )
 
 func main() {
@@ -42,6 +43,11 @@ func main() {
 		totalHousesWithRobo := day3.SolveNumberOfHousesWithPresents(puzzleInput, 2)
 		log.Printf("From puzzle input, total houses with atleast one present is %d", totalHouses)
 		log.Printf("From puzzle input, total houses with atleast one present (two workers) is %d", totalHousesWithRobo)
+	case 4:
+		lowestNumber := day4.SolveLowestPositiveNumber(puzzleInput, "00000")
+		lowestNumberWithSixZeroes := day4.SolveLowestPositiveNumber(puzzleInput, "000000")
+		log.Printf("From puzzle input, lowest positive number to be appened to puzzle input and get md5 hash with `00000` prefix is %d", lowestNumber)
+		log.Printf("From puzzle input, lowest positive number to be appened to puzzle input and get md5 hash with `000000` prefix is %d", lowestNumberWithSixZeroes)
 	default:
 		log.Fatalf("the day %d is not implemented yet.", day)
 	}
